@@ -272,3 +272,46 @@ h1 {
         box-sizing: border-box;
     }
 }
+
+/* Update input styles */
+input[type="date"] {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+@media screen and (max-width: 768px) {
+    input[type="date"] {
+        width: 90%;
+        padding: 12px 15px;
+        font-size: clamp(14px, 2vw, 16px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-group {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="date"] {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        padding: 12px 10px;
+    }
+    
+    /* Ensure labels are also centered */
+    label {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+}
