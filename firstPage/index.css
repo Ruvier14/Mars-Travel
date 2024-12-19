@@ -210,4 +210,46 @@ input:focus, select:focus {
     box-shadow: 0 0 0 2px #6633ff, 0 0 10px rgba(102, 51, 255, 0.2);
 }
 
+/* Add media queries at the end of  CSS file */
+@media screen and (max-width: 768px) {
+    /* Tablet styles */
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    /* Adjust font sizes for better readability */
+    h1 { font-size: 24px; }
+    p { font-size: 16px; }
+}
+
+@media screen and (max-width: 480px) {
+    /* Mobile styles */
+    .container {
+        width: 95%;
+    }
+    
+    /* Stack elements vertically on mobile */
+    .row {
+        flex-direction: column;
+    }
+    
+    /* Make images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Adjust navigation for mobile */
+    nav {
+        padding: 10px;
+    }
+    
+    /* Adjust buttons for touch targets */
+    button {
+        min-height: 44px; /* Minimum touch target size */
+        margin: 10px 0;
+    }
+}
+
 

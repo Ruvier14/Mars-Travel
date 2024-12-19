@@ -216,3 +216,31 @@ h1 {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
+/* Add similar media queries adjusted for second page */
+@media screen and (max-width: 768px) {
+    /* Tablet styles */
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Mobile styles */
+    .container {
+        width: 95%;
+    }
+    
+    /* Make form elements more mobile-friendly */
+    input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+    }
+    
+    /* Adjust any multi-column layouts */
+    .column {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
