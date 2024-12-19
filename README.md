@@ -76,29 +76,29 @@ git push -u origin main
 
 --||firstPage
 
-  -index.css
+  -++index.css
   
-  -index.html
+  -++index.html
   
-  -index.js
+  -++index.js
   
 -node_modules
 
 --||secPage
 
-  -index2.css
+  -++index2.css
   
-  -index2.html
+  -++index2.html
   
-  -index2.js
+  -++index2.js
   
 --||thirPage
 
-  -index3.css
+  -++index3.css
   
-  -index3.html
+  -++index3.html
   
-  -index3.js
+  -++index3.js
   
 -package-log.json
 
