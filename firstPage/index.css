@@ -146,13 +146,15 @@ body {
 input, select {
     background-color: rgba(255, 255, 255, 0.9);
     width: 80%;
-    padding: 10px;
+    padding: 12px 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin: 0 auto;
-    display: block;
     box-sizing: border-box;
     font-size: 16px;
+    margin: 8px auto;
+    display: block;
+    min-width: 250px;
+    max-width: 90%;
 }
 
 button {
@@ -168,6 +170,10 @@ button {
     width: 100%;
     font-size: 16px;
     transition: all 0.3s ease;
+    width: 80%;
+    max-width: 90%;
+    min-width: 250px;
+    margin: 20px auto;
 }
 
 button:hover {
@@ -197,16 +203,22 @@ h1 {
 }
 
 .form-group {
-    margin-bottom: 25px; /* Increased margin between form groups */
-    text-align: center; /* Center the form groups */
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 label {
     display: block;
+    width: 100%;
     margin-bottom: 10px;
     font-weight: bold;
     color: #0e0202;
     font-size: 1.1em;
+    text-align: center;
 }
 
 /* additional styles */
@@ -229,7 +241,8 @@ input:focus, select:focus {
     p { font-size: 16px; }
     input, select, button {
         width: 90%;
-        height: clamp(40px, 6vh, 50px);
+        min-width: 280px;
+        max-width: 90vw;
     }
 }
 
@@ -261,6 +274,18 @@ input:focus, select:focus {
     button {
         min-height: 44px; /* Minimum touch target size */
         margin: 10px 0;
+    }
+
+    .form-group {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    input, select {
+        width: 100%;
+        min-width: 250px;
+        max-width: 90vw;
     }
 }
 

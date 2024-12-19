@@ -39,14 +39,19 @@ body {
     margin-bottom: 25px;
     text-align: center;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 label {
     display: block;
+    width: 100%;
     margin-bottom: 10px;
     font-weight: bold;
     color: #444;
     font-size: 1.1em;
+    text-align: center;
 }
 
 /* Input Styles */
@@ -58,9 +63,10 @@ input, select, textarea {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
-    margin: 0 auto;
+    margin: 8px auto;
     display: block;
     min-width: 250px;
+    max-width: 90%;
 }
 
 /* Textarea Styles */
@@ -98,9 +104,11 @@ button {
     cursor: pointer;
     width: 80%;
     font-size: 16px;
-    margin: 20px auto 0;
+    margin: 20px auto;
     display: block;
     transition: all 0.3s ease;
+    max-width: 90%;
+    min-width: 250px;
 }
 
 button:hover {
