@@ -8,12 +8,20 @@
   ],
   "routes": [
     {
+      "src": "/secPage/index2.html",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/thirPage/index3.html",
+      "dest": "/server.js"
+    },
+    {
       "src": "/secPage/(.*)",
-      "dest": "/secPage/$1"
+      "dest": "/server.js"
     },
     {
       "src": "/thirPage/(.*)",
-      "dest": "/thirPage/$1"
+      "dest": "/server.js"
     },
     {
       "src": "/(.*)",
