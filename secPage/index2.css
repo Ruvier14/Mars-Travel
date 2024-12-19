@@ -1,0 +1,218 @@
+/* Body and Background Styles */
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #0066ff, #3399ff, #6633ff, #9966ff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Container Styles */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #444;
+    font-size: 1.1em;
+}
+
+/* Input Styles */
+input, select {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Textarea Styles */
+textarea {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0 auto;
+    display: block;
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+/* Focus States */
+input:focus, select:focus, textarea:focus {
+    border-color: transparent;
+    outline: none;
+    box-shadow: 0 0 0 2px #6633ff, 0 0 10px rgba(102, 51, 255, 0.2);
+}
+
+/* Button Styles */
+button {
+    background: linear-gradient(45deg, #0066ff, #6633ff);
+    background-size: 200% 200%;
+    animation: gradientButton 5s ease infinite;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 80%;
+    font-size: 16px;
+    margin: 20px auto 0;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #0047b3, #4d1aff);
+    background-size: 200% 200%;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    margin: 0 auto 40px auto;
+    padding: 10px 0;
+    background: linear-gradient(45deg, #0066ff, #6633ff);
+    background-size: 200% 200%;
+    animation: gradientText 5s ease infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wave Animations */
+.wave-container-top, .wave-container-bottom {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.wave-container-top {
+    top: 0;
+    left: 0;
+}
+
+.wave-container-bottom {
+    bottom: 0;
+    left: 0;
+}
+
+.wave-top, .wave-bottom {
+    position: absolute;
+    width: 200%;
+    height: 150px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23ffffff22'/%3E%3C/svg%3E");
+    background-size: 50% 100%;
+}
+
+
+/* Top waves */
+.wave-top:nth-child(1) {
+    top: -25px;
+    opacity: 0.5;
+    animation: waveTop 25s linear infinite;
+}
+
+.wave-top:nth-child(2) {
+    top: -35px;
+    opacity: 0.3;
+    animation: waveTop 15s linear infinite reverse;
+}
+
+.wave-top:nth-child(3) {
+    top: -45px;
+    opacity: 0.2;
+    animation: waveTop 20s linear infinite;
+}
+
+/* Bottom waves */
+.wave-bottom:nth-child(1) {
+    bottom: -25px;
+    opacity: 0.5;
+    animation: waveBottom 25s linear infinite;
+}
+
+.wave-bottom:nth-child(2) {
+    bottom: -35px;
+    opacity: 0.3;
+    animation: waveBottom 15s linear infinite reverse;
+}
+
+.wave-bottom:nth-child(3) {
+    bottom: -45px;
+    opacity: 0.2;
+    animation: waveBottom 20s linear infinite;
+}
+
+/* Animation Keyframes */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes gradientButton {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes waveTop {
+    0% { transform: translateX(0) rotate(180deg); }
+    100% { transform: translateX(-50%) rotate(180deg); }
+}
+
+@keyframes waveBottom {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}

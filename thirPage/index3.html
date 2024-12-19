@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Declaration</title>
+    <link rel="stylesheet" href="/thirPage/index3.css">
+    <script src="/thirPage/index3.js" defer></script>
+</head>
+<body>
+    <!-- Wave containers remain the same -->
+    <div class="wave-container-top">
+        <div class="wave-top"></div>
+        <div class="wave-top"></div>
+        <div class="wave-top"></div>
+    </div>
+    
+    <div class="wave-container-bottom">
+        <div class="wave-bottom"></div>
+        <div class="wave-bottom"></div>
+        <div class="wave-bottom"></div>
+    </div>
+
+    <div class="container">
+        
+        <h1>Health Declaration</h1>
+        
+        <form id="healthDeclarationForm">
+            <!-- Health Declaration -->
+            <div class="form-group">
+                <label>Do you have any current health issues?</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="healthIssues" value="yes" required>
+                        Yes
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="healthIssues" value="no" required>
+                        No
+                    </label>
+                </div>
+            </div>
+
+            <!-- Emergency Contact -->
+            <div class="form-group">
+                <label for="emergencyName">Emergency Contact Name</label>
+                <input type="text" id="emergencyName" name="emergencyName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emergencyRelation">Relationship</label>
+                <input type="text" id="emergencyRelation" name="emergencyRelation" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emergencyPhone">Emergency Contact Phone</label>
+                <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+            </div>
+
+            <!-- Medical Conditions -->
+            <div class="form-group">
+                <label for="medicalConditions">Medical Conditions (if applicable)</label>
+                <textarea id="medicalConditions" name="medicalConditions" 
+                    placeholder="Please list any medical conditions, allergies, or medications..."></textarea>
+            </div>
+
+            <button type="submit" class="next-button">Submit</button>
+            <button id="backButton" class="back-button">Back</button>
+        </form>
+    </div>
+</body>
+</html>
