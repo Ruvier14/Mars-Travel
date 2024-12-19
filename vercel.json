@@ -4,16 +4,33 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "*/.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.{css.js}",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "/public/$1"
+      "src": "/firstPage",
+      "dest": "/firstPage/index.html"
+    },
+    {
+      "src": "/secPage",
+      "dest": "/secPage/index2.html"
+    },
+    {
+      "src": "/thirPage",
+      "dest": "/thirPage/index3.js"
     },
     {
       "src": "/(.*)",
       "dest": "/server.js"
     }
+  
   ]
 }
