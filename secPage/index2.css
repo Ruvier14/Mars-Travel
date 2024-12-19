@@ -18,19 +18,16 @@ body {
 /* Container Styles */
 .container {
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 40px;
+    padding: 3vh 3vw;
     border-radius: 12px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    width: 100%;
+    width: 90%;
     max-width: 500px;
-    margin: 40px auto;
+    margin: 2vh auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-height: none;
-    overflow-y: visible;
-    padding: 20px;
     min-width: 300px;
 }
 
@@ -42,6 +39,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 label {
@@ -57,16 +56,16 @@ label {
 /* Input Styles */
 input, select, textarea {
     background-color: rgba(255, 255, 255, 0.9);
-    width: 80%;
+    width: 100%;
     padding: 12px 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
-    margin: 8px auto;
+    margin: 8px 0;
     display: block;
     min-width: 250px;
-    max-width: 90%;
+    max-width: 100%;
 }
 
 /* Textarea Styles */
@@ -102,13 +101,12 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 80%;
-    font-size: 16px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 250px;
     margin: 20px auto;
     display: block;
     transition: all 0.3s ease;
-    max-width: 90%;
-    min-width: 250px;
 }
 
 button:hover {
@@ -245,7 +243,9 @@ h1 {
     }
     
     input, select, textarea, button {
-        width: 90%;
+        width: 100%;
+        min-width: 280px;
+        max-width: 100%;
         font-size: clamp(14px, 2vw, 16px);
     }
     
@@ -263,9 +263,10 @@ h1 {
     }
     
     /* Make form elements more mobile-friendly */
-    input, select, textarea {
+    input, select, textarea, button {
         width: 100%;
-        padding: 12px;
+        min-width: 250px;
+        max-width: 100%;
         margin: 8px 0;
     }
     
@@ -285,43 +286,8 @@ h1 {
 
 /* Update input styles */
 input[type="date"] {
-    width: 80%;
-    margin: 0 auto;
     text-align: center;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-}
-
-@media screen and (max-width: 768px) {
-    input[type="date"] {
-        width: 90%;
-        padding: 12px 15px;
-        font-size: clamp(14px, 2vw, 16px);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .form-group {
-        width: 100%;
-        padding: 0 10px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    input[type="date"] {
-        width: 100%;
-        max-width: 280px;
-        text-align: center;
-        padding: 12px 10px;
-    }
-    
-    /* Ensure labels are also centered */
-    label {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 8px;
-    }
 }
