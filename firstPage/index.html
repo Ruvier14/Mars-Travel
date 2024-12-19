@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+
+    <!-- Top Waves -->
+    <div class="wave-container-top">
+        <div class="wave-top"></div>
+        <div class="wave-top"></div>
+        <div class="wave-top"></div>
+    </div>
+    
+    <!-- Bottom Waves -->
+    <div class="wave-container-bottom">
+        <div class="wave-bottom"></div>
+        <div class="wave-bottom"></div>
+        <div class="wave-bottom"></div>
+    </div>
+
+    <div class="container">
+        <h1>Personal Information Form</h1>
+    
+    <form id="personalInfoForm">
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nationality">Nationality:</label>
+            <select id="nationality" name="nationality" required>
+                <option value="">Select a nationality</option>
+                <option value="afghan">Afghan</option>
+                <option value="albanian">Albanian</option>
+                <option value="algerian">Algerian</option>
+                <option value="american">American</option>
+                <option value="andorran">Andorran</option>
+                <option value="angolan">Angolan</option>
+                <!-- ... more options ... -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <button type="submit">Next</button>
+    </form>
+    </div>
+    
+
+</body>
+</html>

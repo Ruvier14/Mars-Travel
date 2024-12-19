@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Preferences</title>
+    <link rel="stylesheet" href="./index2.css">
+    <script src="./index2.js" defer></script>
+</head>
+    <body>
+        <!-- Top Waves -->
+        <div class="wave-container-top">
+            <div class="wave-top"></div>
+            <div class="wave-top"></div>
+            <div class="wave-top"></div>
+        </div>
+        
+        <!-- Bottom Waves -->
+        <div class="wave-container-bottom">
+            <div class="wave-bottom"></div>
+            <div class="wave-bottom"></div>
+            <div class="wave-bottom"></div>
+        </div>
+
+        <div class="container">
+            <h1>Travel Preferences</h1>
+            
+            <form id="travelPreferencesForm">
+                <div class="form-group">
+                    <label for="departureDate">Departure Date</label>
+                    <input type="date" id="departureDate" name="departureDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="returnDate">Return Date</label>
+                    <input type="date" id="returnDate" name="returnDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="accommodation">Accommodation Preference</label>
+                    <select id="accommodation" name="accommodation" required>
+                        <option value="">Select accommodation type</option>
+                        <option value="standard">Martian Base</option>
+                        <option value="deluxe">Space Hotel Pod</option>
+                        <option value="suite">Luxury Suite Pod</option>
+                        <option value="family">Family Pod</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests</label>
+                    <textarea id="specialRequests" name="specialRequests" rows="4" 
+                        placeholder="Enter any special requests or requirements..."></textarea>
+                </div>
+
+                <!-- Button -->
+                
+                <button type="button" id="nextButton">Next</button>
+                <button id="backButton" class="back-button">Back</button>
+                
+            </form>
+        </div>
+    </body>
+</html>

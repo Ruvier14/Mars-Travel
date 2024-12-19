@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #0066ff 0%, #3399ff 100%);
+    animation: gradientBG 15s linear infinite;
+}
+
+/* Top Waves */
+.wave-container-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.wave-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23ffffff22'/%3E%3C/svg%3E");
+    animation: waveTop 15s linear infinite;
+    transform: rotate(180deg);
+}
+
+.wave-top:nth-child(2) {
+    top: 10px;
+    opacity: 0.5;
+    animation: waveTop 15s linear infinite reverse;
+}
+
+.wave-top:nth-child(3) {
+    top: 20px;
+    opacity: 0.2;
+    animation: waveTop 20s linear infinite;
+}
+
+/* Bottom Waves */
+.wave-container-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23ffffff22'/%3E%3C/svg%3E");
+    animation: waveBottom 15s linear infinite;
+}
+
+.wave-bottom:nth-child(2) {
+    bottom: 10px;
+    opacity: 0.5;
+    animation: waveBottom 15s linear infinite reverse;
+}
+
+.wave-bottom:nth-child(3) {
+    bottom: 20px;
+    opacity: 0.2;
+    animation: waveBottom 20s linear infinite;
+}
+
+.wave-top, .wave-bottom {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23ffffff33'/%3E%3C/svg%3E");
+}
+
+@keyframes waveTop {
+    0% {
+        transform: translateX(0) rotate(180deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(180deg);
+    }
+}
+
+@keyframes waveBottom {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradientButton {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container and form styles */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .9);
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    margin: 40px 0;
+}
+
+input, select {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
+    background-color: #1a37df;
+    background: linear-gradient(45deg, #0066ff, #906bfd);
+    animation: gradientButton 5s ease infinite;
+    background-size: 200% 200%;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #0047b3, #4d1aff);
+    background-size: 200% 200%;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto 40px auto; /* Top Right Bottom Left margins */
+    padding: 10px 0;
+    background: linear-gradient(45deg, #000000, #000000);
+    background-size: 200% 200%;
+    animation: gradientText 5s ease infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 2em;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 25px; /* Increased margin between form groups */
+    text-align: center; /* Center the form groups */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #0e0202;
+    font-size: 1.1em;
+}
+
+/* additional styles */
+input:focus, select:focus {
+    border-color: transparent;
+    outline: none;
+    box-shadow: 0 0 0 2px #6633ff, 0 0 10px rgba(102, 51, 255, 0.2);
+}
+
+
