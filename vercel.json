@@ -6,31 +6,42 @@
       "use": "@vercel/node"
     },
     {
-      "src": "*/.html",
+      "src": "firstPage/**",
       "use": "@vercel/static"
     },
     {
-      "src": "**/*.{css.js}",
+      "src": "secPage/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "thirPage/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/firstPage",
-      "dest": "/firstPage/index.html"
+      "src": "/",
+      "dest": "server.js"
     },
     {
-      "src": "/secPage",
-      "dest": "/secPage/index2.html"
+      "src": "/secPage/(.*)",
+      "dest": "server.js"
     },
     {
-      "src": "/thirPage",
-      "dest": "/thirPage/index3.js"
+      "src": "/thirPage/(.*)",
+      "dest": "server.js"
+    },
+    {
+      "src": "/(.+\\.css)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.+\\.js)",
+      "dest": "/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/server.js"
+      "dest": "server.js"
     }
-  
   ]
 }

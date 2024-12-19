@@ -6,9 +6,9 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('firstPage'));
-app.use('/secPage', express.static('secPage')); //
-app.use('/thirPage', express.static('thirPage')); // Add this line
+app.use(express.static(path.join(__dirname, 'firstPage')));
+app.use('/secPage', express.static(path.join(__dirname, 'secPage')));
+app.use('/thirPage', express.static(path.join(__dirname, 'thirPage')));
 
 // Routes
 app.get('/', (req, res) => {
