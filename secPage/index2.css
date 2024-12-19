@@ -31,6 +31,7 @@ body {
     max-height: none;
     overflow-y: visible;
     padding: 20px;
+    min-width: 300px;
 }
 
 /* Form Styles */
@@ -49,7 +50,7 @@ label {
 }
 
 /* Input Styles */
-input, select {
+input, select, textarea {
     background-color: rgba(255, 255, 255, 0.9);
     width: 80%;
     padding: 12px 15px;
@@ -59,6 +60,7 @@ input, select {
     font-size: 16px;
     margin: 0 auto;
     display: block;
+    min-width: 250px;
 }
 
 /* Textarea Styles */
