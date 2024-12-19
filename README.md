@@ -76,14 +76,22 @@ git push -u origin main
 
 Mars-Travel/
 │
+
 ├── secPage/
+
 │ ├── index2.html
+
 │ ├── index2.css
+
 │ └── index2.js
+
 │
 ├── index.html
+
 ├── styles.css
+
 ├── script.js
+
 └── README.md
 
 
