@@ -7,7 +7,9 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     background: linear-gradient(45deg, #0066ff, #3399ff, #6633ff, #9966ff);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
@@ -26,6 +28,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: none;
+    overflow-y: visible;
+    padding: 20px;
 }
 
 /* Form Styles */
@@ -242,5 +247,12 @@ h1 {
     .column {
         width: 100%;
         padding: 10px 0;
+    }
+    
+    /* Ensure form elements don't overflow */
+    .form-group {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 }
